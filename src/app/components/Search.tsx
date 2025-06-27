@@ -126,13 +126,17 @@ export default function Search() {
             <table className="min-w-full bg-white rounded-lg overflow-hidden">
               <thead className="bg-gray-100">
                 <tr>
-                  <th className="py-3 px-4 text-left">Symbol</th>
-                  <th className="py-3 px-4 text-left">Name</th>
-                  <th className="py-3 px-4 text-left">Type</th>
-                  <th className="py-3 px-4 text-left">Region</th>
-                  <th className="py-3 px-4 text-left">Currency</th>
-                  <th className="py-3 px-4 text-left">Match Score</th>
-                  <th className="py-3 px-4 text-left">Actions</th>{" "}
+                  <th className="py-3 px-4 text-left text-gray-900">Symbol</th>
+                  <th className="py-3 px-4 text-left text-gray-900">Name</th>
+                  <th className="py-3 px-4 text-left text-gray-900">Type</th>
+                  <th className="py-3 px-4 text-left text-gray-900">Region</th>
+                  <th className="py-3 px-4 text-left text-gray-900">
+                    Currency
+                  </th>
+                  <th className="py-3 px-4 text-left text-gray-900">
+                    Match Score
+                  </th>
+                  <th className="py-3 px-4 text-left text-gray-900">Actions</th>{" "}
                 </tr>
               </thead>
               <tbody>
@@ -146,14 +150,18 @@ export default function Search() {
                       }`}
                       onClick={() => setSelectedStock(stock.symbol)}
                     >
-                      <td className="py-3 px-4 font-semibold">
+                      <td className="py-3 px-4 font-semibold text-gray-500">
                         {stock.symbol}
                       </td>
-                      <td className="py-3 px-4">{stock.name}</td>
-                      <td className="py-3 px-4">{stock.type}</td>
-                      <td className="py-3 px-4">{stock.region}</td>
-                      <td className="py-3 px-4">{stock.currency}</td>
-                      <td className="py-3 px-4">
+                      <td className="py-3 px-4 text-gray-500">{stock.name}</td>
+                      <td className="py-3 px-4 text-gray-500">{stock.type}</td>
+                      <td className="py-3 px-4 text-gray-500">
+                        {stock.region}
+                      </td>
+                      <td className="py-3 px-4 text-gray-500">
+                        {stock.currency}
+                      </td>
+                      <td className="py-3 px-4 text-gray-500">
                         {(stock.matchScore * 100).toFixed(1)}%
                       </td>
                       <td className="py-3 px-4">

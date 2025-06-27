@@ -12,7 +12,9 @@ import {
 export default function StockBarChart({ data }: { data: any[] }) {
   return (
     <div className="bg-white p-4 rounded-lg shadow">
-      <h3 className="font-bold text-lg mb-4">Historical Price Analysis</h3>
+      <h3 className="font-bold text-lg mb-4 text-gray-500">
+        Historical Price Analysis
+      </h3>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />

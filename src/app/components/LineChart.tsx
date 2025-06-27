@@ -12,7 +12,7 @@ import {
 export default function StockLineChart({ data }: { data: any[] }) {
   return (
     <div className="bg-white p-4 rounded-lg shadow">
-      <h3 className="font-bold text-lg mb-4">Live Price Trend</h3>
+      <h3 className="font-bold text-lg mb-4 text-gray-500">Live Price Trend</h3>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />

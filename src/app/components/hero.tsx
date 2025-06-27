@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="w-full py-12 md:py-24   bg-gradient-to-br from-slate-50 to-blue-50">
+    <section className="w-full py-20 md:py-24   bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <div className="flex flex-col justify-center space-y-4">
@@ -100,7 +100,7 @@ export default function Hero() {
           <p className="text-center text-sm text-slate-500 mb-6">
             Trusted by over 50,000+ investors worldwide
           </p>
-          <div className="flex justify-center items-center gap-8 opacity-60">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 opacity-60">
             <div className="text-2xl font-bold text-slate-400">TechCrunch</div>
             <div className="text-2xl font-bold text-slate-400">Forbes</div>
             <div className="text-2xl font-bold text-slate-400">Bloomberg</div>

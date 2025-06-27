@@ -70,13 +70,13 @@ export default function StockDetailPage() {
   }
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 pt-32">
       <Link href="/" className="inline-flex items-center mb-4 text-blue-500">
         <ArrowLeft size={16} className="mr-2" /> Back to Home
       </Link>
 
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-3xl font-bold text-gray-900">
           {stockQuote.name} ({stockQuote.symbol})
         </h1>
         <button
@@ -100,7 +100,9 @@ export default function StockDetailPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-gray-100 p-4 rounded">
             <p className="text-gray-600">Current Price</p>
-            <p className="text-2xl font-bold">${stockQuote.price.toFixed(2)}</p>
+            <p className="text-2xl font-bold text-gray-600">
+              ${stockQuote.price.toFixed(2)}
+            </p>
           </div>
           <div className="bg-gray-100 p-4 rounded">
             <p className="text-gray-600">Change</p>
@@ -119,11 +121,15 @@ export default function StockDetailPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white p-4 rounded-lg shadow">
-          <h2 className="text-xl font-semibold mb-4">Price Trend</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-700">
+            Price Trend
+          </h2>
           <StockLineChart data={historicalData} />
         </div>
         <div className="bg-white p-4 rounded-lg shadow">
-          <h2 className="text-xl font-semibold mb-4">Trading Volume</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-700">
+            Trading Volume
+          </h2>
           <StockBarChart data={historicalData} />
         </div>
       </div>
